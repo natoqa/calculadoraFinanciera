@@ -52,4 +52,4 @@ def crear_reporte_jubilacion(df_crecimiento, capital_final, total_aportado):
         pdf.cell(40, 6, f"${row['Saldo Final']:,.2f}", 1, 1)
 
     # Retorna el PDF como bytes
-    return pdf.output(dest='S').encode('latin-1')
+    return bytes(pdf.output(dest='S'))
